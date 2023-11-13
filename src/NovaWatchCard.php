@@ -4,7 +4,6 @@ namespace NormanHuth\NovaWatchCard;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log;
 use Laravel\Nova\Card;
 use Laravel\Nova\Nova;
 
@@ -104,8 +103,6 @@ class NovaWatchCard extends Card
 
         if (!$data) {
             $response = Http::get('https://novawat.ch/api/update-check/' . $this->versionToCheck);
-
-            Log::info($response->status());
 
             if ($response->status() == 200) {
                 $data = [
