@@ -1,0 +1,32 @@
+{
+    "name": "norman-huth/nova-watch-card",
+    "description": "A card for Laravel Nova, which checks whether an update is available with NovaWat.ch.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "nova-card"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "laravel/nova": "^4.0",
+        "norman-huth/nova-basic-package": "^1.2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "NormanHuth\\NovaWatchCard\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NormanHuth\\NovaWatchCard\\CardServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
